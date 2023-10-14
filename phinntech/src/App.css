@@ -4,13 +4,30 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Change to column layout */
+  /* flex-direction: column;  */
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh; /* Ensure full viewport height */
+  width: 100vw;
 }
 
+.App {
+  text-align: center;
+  /* display: flex; */
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  background-image: linear-gradient(79deg, #0253f6, #3a81fd 40%, #39faa3);
+}
 .chat-container {
   width: 100%; /* Take up the full width of the viewport */
+  height: 100%;
   flex: 1; /* Take up all available vertical space */
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -28,7 +45,7 @@ body {
 
 .chat-messages {
   padding: 10px;
-  max-height: 300px;
+  max-height: 100%;
   overflow-y: scroll;
 }
 
@@ -46,7 +63,7 @@ body {
 }
 
 .user {
-  background-color: #0077CC;
+  background-color: #164f78;
   color: #fff;
   align-self: flex-end;
 }

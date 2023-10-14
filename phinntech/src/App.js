@@ -54,6 +54,8 @@ class App extends Component {
 
   render() {
     return (
+      <div className = "App">
+        {
       <div className="chat-container">
         <div className="chat-header">ChatGPT Bot</div>
         <div className="chat-messages">{this.renderMessages()}</div>
@@ -78,6 +80,8 @@ class App extends Component {
             <button className="upload-button">Upload PDF</button>
           </label>
         </div>
+      </div>
+       }   
       </div>
     );
   }

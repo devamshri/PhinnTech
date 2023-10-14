@@ -4,16 +4,17 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Change to column layout */
   align-items: center;
   height: 100vh; /* Ensure full viewport height */
 }
 
 .chat-container {
-  width: 80%; /* Adjust the width as needed */
+  width: 100%; /* Take up the full width of the viewport */
+  flex: 1; /* Take up all available vertical space */
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 0; /* Remove border radius */
   overflow: hidden;
 }
 
@@ -35,6 +36,7 @@ body {
   display: flex;
   padding: 10px;
   background-color: #fff;
+  justify-content: flex-end; /* Move buttons to the bottom */
 }
 
 .message {

@@ -57,7 +57,7 @@ class App extends Component {
       <div className = "App">
         {
       <div className="chat-container">
-        <div className="chat-header">ChatGPT Bot</div>
+        <div className="chat-header">PhinnTech</div>
         <div className="chat-messages">{this.renderMessages()}</div>
         <div className="chat-input">
           <input

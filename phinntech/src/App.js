@@ -26,23 +26,16 @@ class App extends Component {
     }
   };
 
-  handleUploadPDF = (event) => {
-    const file = event.target.files[0];
+  handleFileUpload = (e) => {
+    const file = e.target.files[0];
 
-    if (file) {
-      // You can handle the uploaded PDF here, e.g., by displaying its name or processing it
-      const fileName = file.name;
-      const messages = [...this.state.messages, { text: `Uploaded PDF: ${fileName}`, sender: 'user' }];
-      this.setState({ messages });
-
-      // Simulate a bot response (replace with actual AI logic)
-      setTimeout(() => {
-        const botResponse = 'This is a bot response.';
-        messages.push({ text: botResponse, sender: 'bot' });
-        this.setState({ messages });
-      }, 1000);
+    if (file && file.type === 'application/pdf') {
+      // You can handle the PDF file here, e.g., send it to an API or perform other actions.
+      console.log('Selected PDF file:', file);
+    } else {
+      console.error('Please select a valid PDF file.');
     }
-  };
+  }
 
   renderMessages = () => {
     return this.state.messages.map((message, index) => (
@@ -57,7 +50,7 @@ class App extends Component {
       <div className = "App">
         {
       <div className="chat-container">
-        <div className="chat-header">PhinnTech</div>
+        <div className="chat-header">ChatGPT Bot</div>
         <div className="chat-messages">{this.renderMessages()}</div>
         <div className="chat-input">
           <input
@@ -70,15 +63,11 @@ class App extends Component {
 
           {/* Add the "Upload PDF" button */}
           <input
-            type="file"
-            accept=".pdf"
-            id="pdf-upload"
-            style={{ display: 'none' }}
-            onChange={this.handleUploadPDF}
-          />
-          <label htmlFor="pdf-upload">
-            <button className="upload-button">Upload PDF</button>
-          </label>
+          className="upload-button"
+          type="file"
+          accept=".pdf"
+          onChange={this.handleFileUpload}
+        />
         </div>
       </div>
        }   

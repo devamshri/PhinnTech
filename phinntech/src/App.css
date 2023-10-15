@@ -90,3 +90,19 @@ button {
   margin-left: 10px;
   cursor: pointer;
 }
+
+.upload-button {
+  padding: 10px 20px;
+  background-color: #0077CC;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+
+
+
+
